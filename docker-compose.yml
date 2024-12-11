@@ -1,0 +1,25 @@
+#version: '3.8'
+
+services:
+  web:
+    image: tomcat:10.1.26-jdk17
+    ports:
+      - "8082:8082"
+    depends_on:
+      - postgres
+    environment:
+      - JAVA_OPTS=-Dspring.datasource.url=jdbc:postgresql://postgres:5432/hebirnate_project
+
+  postgres:
+    image: postgres:16.4
+    environment:
+      POSTGRES_USER: sam
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: hebirnate_project
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

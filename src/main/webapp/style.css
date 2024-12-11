@@ -1,0 +1,72 @@
+/* Global styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #202124;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+
+.task-board {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.task-column {
+    background-color: #282A36;
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.column-header {
+    text-align: center;
+    background-color: #404258;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.task-card {
+    background-color: #3B3F4A;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.task-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.assignee {
+    font-size: 14px;
+    color: rgba(179, 181, 186, 0.56);
+}
+
+.labels {
+    margin-top: 10px;
+}
+
+.label {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+/* Label types */
+.label.work {
+    background-color: #4CAF50;
+}
+
+.label.household {
+    background-color: #FF9800;
+}
+
+.label.leisure {
+    background-color: rgba(37, 46, 64, 0.56);
+}
